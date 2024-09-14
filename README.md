@@ -4,10 +4,15 @@ This project involves building and training an LSTM model to detect hate speech,
 
 ## Project Overview
 
+This project is based on the [Hate Speech and Offensive Language Dataset](https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset) from Kaggle. The dataset contains tweets labeled as hate speech, offensive language, or neither. The goal of the project is to build an LSTM-based model to classify these tweets into one of the three categories.
 - **Task**: Detect hate speech and offensive language from tweets.
 - **Model**: Long Short-Term Memory (LSTM) network.
 - **Metrics**: Accuracy, F1-score, precision, and recall.
 - **Dataset**: A dataset of tweets with annotations for hate speech, offensive language, and neutral content.
+
+### Data Imbalance
+
+The dataset has a significant imbalance, with the majority of the tweets classified as offensive language, fewer as neutral, and the smallest portion as hate speech. This imbalance affects the model's performance, as it may struggle to correctly classify the minority class (hate speech). To mitigate this, the model uses **Focal Loss** as the loss function, which helps focus the training process on the harder-to-classify examples.
 
 ## Features
 
